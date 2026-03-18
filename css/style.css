@@ -1,0 +1,644 @@
+@font-face {
+  font-family: "PostNoBills";
+  src: url("../assets/fonts/PostNoBillsJaffna-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PretendardVariable";
+  src: url("../assets/fonts/PretendardVariable.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  /* scroll-behavior: smooth; */
+}
+body {
+  overflow-x: hidden;
+  background-color: #fff;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #1a1a1a;
+  letter-spacing: -0.32px;
+  font-optical-sizing: auto;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #1a1a1a;
+}
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+/* swiper */
+/* .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
+/* header */
+.container {
+  width: 1720px;
+  margin: 0 auto;
+}
+.header {
+  width: 100%;
+  height: 80px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.header img {
+  height: 40px;
+}
+
+.nav .menu-list {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.nav a:hover {
+  color: #2c6cff;
+}
+
+/* swiper */
+.section {
+  width: 100%;
+}
+
+.hero-swiper {
+  width: 100%;
+  height: 600px;
+}
+
+.swiper-slide {
+  position: relative;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+/* swiper text */
+.carousel-overlay {
+  position: absolute;
+  top: 50%;
+  left: 200px;
+  transform: translateY(-50%);
+  color: #fff;
+}
+
+.carousel-overlay h3 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-family: "PostNoBills", sans-serif;
+  font-size: 42px;
+}
+
+.carousel-overlay p {
+  font-family: "PretendardVariable", sans-serif;
+  font-size: 18px;
+}
+
+/* .section {
+  position: absolute;
+  width: 1920px;
+  height: 7977px;
+  left: 1px;
+  top: 0px;
+  background: linear-gradient(
+    180deg,
+    rgba(246, 244, 188, 0.6) 0%,
+    rgba(174, 243, 255, 0.6) 51.92%,
+    rgba(141, 255, 171, 0.6) 100%
+  );
+} */
+/* ===============================
+   MAP SECTION
+================================ */
+
+.mapping {
+  padding: 120px 0;
+}
+
+.map-title {
+  text-align: center;
+  font-size: 40px;
+  color: #4e6b88;
+  font-family: "Sunflower";
+  margin-bottom: 10px;
+}
+
+.map-sub {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 70px;
+}
+
+/* 지도 영역 */
+
+.map-area {
+  position: relative;
+  width: 800px;
+  margin: 0 auto;
+}
+
+.map-img {
+  width: 700px;
+  display: block;
+  margin: auto;
+}
+
+/* ===============================
+   MAP ITEM
+================================ */
+
+.map-item {
+  position: absolute;
+}
+
+.spot1 {
+  top: -1000px;
+  left: 830px;
+}
+
+.spot2 {
+  top: 300px;
+  left: 710px;
+}
+
+.spot3 {
+  top: 500px;
+  left: 800px;
+}
+
+.spot4 {
+  top: 800px;
+  left: 700px;
+}
+
+.spot5 {
+  top: 1100px;
+  right: 400px;
+}
+
+.spot6 {
+  top: 800px;
+  right: 1000px;
+}
+
+.spot7 {
+  top: 600px;
+  right: 858px;
+}
+
+.spot8 {
+  top: 400px;
+  right: 780px;
+}
+.spot9 {
+  left: 165px;
+  top: 157px;
+}
+/* ===============================
+   PIN
+================================ */
+
+.map-pin {
+  position: absolute;
+  cursor: pointer;
+  animation: pinMove 1s infinite alternate;
+  top: -10px;
+  left: 40px;
+}
+.line {
+  position: absolute;
+  border-left: 2px dashed #6f7f91;
+
+  height: 140px;
+
+  top: 20px;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+.map-pin img {
+  width: 28px;
+}
+.map-pin:hover {
+  transform: scale(1.2);
+}
+
+.pin1 {
+  left: -245px;
+  top: 75px;
+}
+.pin2 {
+  left: -250px;
+  top: 350px;
+}
+.pin3 {
+  left: -415px;
+  top: 89px;
+}
+.pin4 {
+  left: -322px;
+  top: -140px;
+}
+.pin5 {
+  left: -60px;
+  top: -400px;
+}
+.pin6 {
+  left: 440px;
+  top: 10px;
+}
+.pin7 {
+  left: 420px;
+  top: -20px;
+}
+.pin8 {
+  left: 164px;
+  top: 134px;
+}
+.pin9 {
+  left: 230px;
+  top: 300px;
+}
+@keyframes pinMove {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+/* ===============================
+   POSTIT
+================================ */
+
+.postit {
+  position: absolute;
+
+  width: 240px;
+  padding: 20px;
+
+  background: #e6e1a6;
+
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2);
+
+  display: none;
+
+  transform: rotate(-2deg);
+
+  font-family: "Hi Melody";
+  font-size: 18px;
+  top: -100px;
+  left: 40px;
+  animation: pop 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+.postit p {
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+
+.show {
+  display: block;
+}
+@keyframes pop {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.postit h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+/* 접힌 종이 효과 */
+
+.postit::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+
+  border-left: 35px solid #cfc98b;
+  border-top: 35px solid transparent;
+}
+
+/* 포스트잇 사진 */
+
+.postit img {
+  position: absolute;
+
+  top: 10px;
+  right: 10px;
+
+  width: 70px;
+
+  border: 5px solid #fff;
+
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* ===============================
+   STICKER
+================================ */
+
+.sticer {
+  position: absolute;
+  width: 120px;
+  bottom: -80px;
+  right: -60px;
+  animation: float 2s infinite ease-in-out;
+}
+
+.sticer img {
+  width: 100%;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   POSTIT ANIMATION
+================================ */
+
+.postit:hover,
+.postit1:hover,
+.postit2:hover {
+  transform: rotate(-2deg) scale(1.05);
+}
+
+/* ===============================
+   PIN HOVER
+================================ */
+
+.map-pin:hover {
+  transform: scale(1.2);
+}
+
+/*====================================
+  2구역
+=====================================*/
+/* ===============================
+   THEME SECTION (골목길)
+================================ */
+
+.theme {
+  position: relative;
+  min-height: 900px;
+  padding: 120px 0 80px;
+  background: url("../assets/images/lode.png") no-repeat center bottom;
+  background-size: cover;
+}
+
+.theme::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.theme .container {
+  position: relative;
+  z-index: 1;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===============================
+   TITLE
+================================ */
+
+.theme-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.theme-header h2 {
+  font-size: 40px;
+  color: #4e6b88;
+  font-family: "Sunflower", sans-serif;
+  margin-bottom: 10px;
+}
+
+.theme-header p {
+  font-size: 18px;
+  color: #333;
+}
+
+/* ===============================
+   SLIDER
+================================ */
+
+.theme-slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-list {
+  position: relative;
+  width: 900px;
+  height: 430px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.theme-card {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 260px;
+  height: 190px;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.16);
+  opacity: 0;
+  transform: translateX(-50%) scale(0.75);
+  transition: all 0.45s ease;
+  pointer-events: none;
+  background: #fff;
+}
+
+.theme-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 가운데 카드 */
+.theme-card.active {
+  width: 360px;
+  height: 250px;
+  transform: translateX(-50%) scale(1);
+  opacity: 1;
+  z-index: 3;
+  pointer-events: auto;
+  border-radius: 24px 24px 18px 18px;
+}
+/* 왼쪽 카드 */
+.theme-card.prev {
+  transform: translateX(-150%) scale(0.82);
+  opacity: 0.8;
+  z-index: 2;
+}
+
+/* 오른쪽 카드 */
+.theme-card.next {
+  transform: translateX(50%) scale(0.82);
+  opacity: 0.8;
+  z-index: 2;
+}
+
+/* ===============================
+   INFO CARD
+================================ */
+.theme-info {
+  position: absolute;
+  left: 50%;
+  top: 280px; /* 카드 아래 위치 (조절 가능) */
+  transform: translateX(-50%);
+  width: 360px;
+  padding: 24px 26px;
+  background: #efebe8;
+  border-radius: 0 0 24px 24px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  z-index: 4;
+}
+.theme-info h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: #1f1f1f;
+}
+
+.theme-info p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* ===============================
+   BUTTON
+================================ */
+
+.slide-btn {
+  position: absolute;
+  top: 38%;
+  transform: translateY(-50%);
+  z-index: 5;
+  width: 56px;
+  height: 56px;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide-btn.prev {
+  left: 120px;
+}
+
+.slide-btn.next {
+  right: 120px;
+}
+
+.slide-btn i {
+  font-size: 36px;
+  color: #4e6b88;
+  transition: transform 0.3s ease;
+}
+
+.slide-btn:hover i {
+  transform: scale(1.15);
+}
+
+/* ===============================
+   CHARACTER
+================================ */
+
+.theme-character {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.theme-character img {
+  width: 140px;
+  animation: float 2s infinite ease-in-out;
+}

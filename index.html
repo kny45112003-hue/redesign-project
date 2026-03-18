@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>리디자인 프로젝트</title>
+
+    <!--  font -->
+    <!-- sunflower -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Sunflower:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <!-- hi melody -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hi+Melody&family=Noto+Sans+KR&family=Sunflower:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js"></script>
+    <!-- font aswm -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-container">
+          <!-- logo -->
+          <div>
+            <a href="index.html">
+              <img src="assets/icons/mainicon2.png" alt="로고1" />
+              <img src="assets/icons/mainicon.png" alt="로고2" />
+            </a>
+          </div>
+
+          <nav class="nav">
+            <ul class="menu-list">
+              <li><a href="#dagunow">대구나우</a></li>
+              <li><a href="#information">여행정보</a></li>
+              <li><a href="#reservation">예약하기</a></li>
+              <li><a href="#inquiry">문의하기</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- section -->
+    <section class="section">
+      <!-- slider -->
+      <div class="swiper hero-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="assets/images/image 2.png" alt="배너-1" />
+              <div class="carousel-overlay">
+                <h3>대구 대표 관광지 TOP 8</h3>
+                <p>대구 현지인들이 많이찾는 핫플레이스</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="assets/images/image 3.png" alt="배너-2" />
+              <div class="carousel-overlay">
+                <h3>이색적인 골목길 추천</h3>
+                <p>맛집 거리나 역사거리를 추천</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="assets/images/image 4.png" alt="배너-3" />
+              <div class="carousel-overlay">
+                <h3>대구 먹거리 장터</h3>
+                <p>먹거리 종류별로 가게추천</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="assets/images/image 5.png" alt="배너-4" />
+              <div class="carousel-overlay">
+                <h3>대구에 오면 놀자!</h3>
+                <p>대구의 다양한 축제를 소개합니다</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="assets/images/image 6.png" alt="배너-5" />
+              <div class="carousel-overlay">
+                <h3>대구 쇼핑 핫플</h3>
+                <p>현지인들이 많이가는 쇼핑 핫플</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <!-- 1구역 -->
+      <div class="mapping">
+        <div class="container">
+          <h2 class="map-title">대구 추천 관광지</h2>
+          <p class="map-sub">사람들이 많이찾는 로컬 관광지!</p>
+
+          <div class="map-area">
+            <!-- 지도 -->
+            <img src="assets/images/map.png" class="map-img" />
+
+            <div class="map-item">
+              <!-- 핀1 -->
+              <div class="map-item spot1">
+                <div class="map-pin pin1">
+                  <img src="assets/icons/pinicon.png" alt="핀" />
+                </div>
+
+                <!-- 메모1 -->
+                <div class="postit">
+                  <div class="postit-content">
+                    <h3>삼국유사 테마파크</h3>
+
+                    <img
+                      src="assets/images/Frame 1.png"
+                      alt="삼국유사 테마파크"
+                    />
+
+                    <p>주소</p>
+                    <p>군위군 의흥면 일연테마로 100</p>
+
+                    <p>
+                      과거속 삼국유사를 그대로<br />
+                      재현한 역사적 장소
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 스티커1 -->
+                <div class="sticer">
+                  <img src="assets/images/sticar1.png" alt="스티커1" />
+                </div>
+              </div>
+            </div>
+
+            <div class="map-item spot2">
+              <div class="map-item">
+                <!-- 핀2 -->
+                <div class="map-pin pin2">
+                  <img src="assets/icons/pinicon.png" alt="핀" />
+                </div>
+
+                <!-- 메모2 -->
+                <div class="postit">
+                  <div class="postit-content">
+                    <h3>수성못</h3>
+
+                    <img src="assets/images/Frame 2.png" alt="수성못" />
+
+                    <p>주소</p>
+                    <p>대구광역시 수성구 두산동</p>
+
+                    <p>
+                      아름다운 못 주변에 맛집이나<br />
+                      카페가많은 핫플레이스
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 스티커2 -->
+                <div class="sticer">
+                  <img src="assets/images/sticar2.png" alt="스티커2" />
+                </div>
+              </div>
+            </div>
+
+            <div class="map-item spot3">
+              <div class="map-item">
+                <!-- 핀1 -->
+                <div class="map-pin pin3">
+                  <img src="assets/icons/pinicon.png" alt="핀" />
+                </div>
+
+                <!-- 메모1 -->
+                <div class="postit">
+                  <div class="postit-content">
+                    <h3>계산성당</h3>
+
+                    <img src="assets/images/Frame 3.png" alt="계산성당" />
+
+                    <p>주소</p>
+                    <p>대구광역시 중구 서성로 10</p>
+
+                    <p>
+                      대구에 오랜 역사를 가진<br />
+                      구조물이 아름다운 성당
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 스티커1 -->
+                <div class="sticer">
+                  <img src="assets/images/sticar3.png" alt="스티커3" />
+                </div>
+              </div>
+            </div>
+
+            <div class="map-item spot4">
+              <div class="map-item">
+                <!-- 핀1 -->
+                <div class="map-pin pin4">
+                  <img src="assets/icons/pinicon.png" alt="핀" />
+                </div>
+
+                <!-- 메모1 -->
+                <div class="postit">
+                  <div class="postit-content">
+                    <h3>이월드</h3>
+
+                    <img src="assets/images/Frame 4.png" alt="이월드" />
+
+                    <p>주소</p>
+                    <p>대구광역시 달서구 두류공원로 200</p>
+
+                    <p>
+                      여러가지 어트랙션을 즐길<br />
+                      수 있는곳
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 스티커1 -->
+                <div class="sticer">
+                  <img src="assets/images/sticar4.png" alt="스티커1" />
+                </div>
+              </div>
+            </div>
+
+            <div class="map-item spot5">
+              <div class="map-item">
+                <!-- 핀1 -->
+                <div class="map-pin pin5">
+                  <img src="assets/icons/pinicon.png" alt="핀" />
+                </div>
+
+                <!-- 메모1 -->
+                <div class="postit">
+                  <div class="postit-content">
+                    <h3>앞산전망대</h3>
+
+                    <img src="assets/images/Frame 5.png" alt="앞산전망대" />
+
+                    <p>주소</p>
+                    <p>대구광역시 남구 대명9동</p>
+
+                    <p>
+                      대구의 햇살이 가장먼저<br />
+                      비추는곳이자 신년 첫해를<br />
+                      볼수있다
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 스티커1 -->
+                <div class="sticer">
+                  <img src="assets/images/sticar5.png" alt="스티커1" />
+                </div>
+              </div>
+            </div>
+            <div class="map-item spot6">
+              <div class="map-item">
+                <!-- 핀1 -->
+                <div class="map-pin pin6">
+                  <img src="assets/icons/pinicon.png" alt="핀" />
+                </div>
+
+                <!-- 메모1 -->
+                <div class="postit">
+                  <div class="postit-content">
+                    <h3>대구식물원</h3>
+
+                    <img src="assets/images/Frame 6.png" alt="대구식물원" />
+
+                    <p>주소</p>
+                    <p>대구광역시 달서구 화암로 342</p>
+
+                    <p>
+                      대구에서 아름다은 자연을<br />
+                      즐기며 볼수있는곳.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 스티커1 -->
+                <div class="sticer">
+                  <img src="assets/images/sticar6.png" alt="스티커6" />
+                </div>
+              </div>
+            </div>
+            <div class="map-item spot7">
+              <div class="map-item">
+                <!-- 핀1 -->
+                <div class="map-pin pin7">
+                  <img src="assets/icons/pinicon.png" alt="핀" />
+                </div>
+
+                <!-- 메모1 -->
+                <div class="postit">
+                  <div class="postit-content">
+                    <h3>서문시장</h3>
+
+                    <img src="assets/images/Frame 7.png" alt="서문시장" />
+
+                    <p>주소</p>
+                    <p>대구광역시 중구 큰장로26길 45</p>
+
+                    <p>
+                      여러가지 먹거리나 옷감을 파는 <br />
+                      대구에서 가장 오래된 전통시장
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 스티커1 -->
+                <div class="sticer">
+                  <img src="assets/images/sticar7.png" alt="스티커7" />
+                </div>
+              </div>
+            </div>
+            <div class="map-item spot8">
+              <div class="map-item">
+                <!-- 핀1 -->
+                <div class="map-pin pin8">
+                  <img src="assets/icons/pinicon.png" alt="핀" />
+                </div>
+
+                <!-- 메모1 -->
+                <div class="postit">
+                  <div class="postit-content">
+                    <h3>
+                      낙동강<br />
+                      자전거길
+                    </h3>
+
+                    <img src="assets/images/Frame 8.png" alt="낙동강자전거길" />
+
+                    <p>주소</p>
+                    <p>
+                      대구광역시 달성군 다사읍<br />
+                      죽곡리
+                    </p>
+
+                    <p>
+                      넉동강에서 자전거 라이딩을<br />
+                      즐길수있는 장소
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 스티커1 -->
+                <div class="sticer">
+                  <img src="assets/images/sticar8.png" alt="스티커8" />
+                </div>
+              </div>
+            </div>
+
+            <div class="map-item spot9">
+              <div class="map-item">
+                <!-- 핀1 -->
+                <div class="map-pin pin9">
+                  <img src="assets/icons/pinicon.png" alt="핀" />
+                </div>
+
+                <!-- 메모1 -->
+                <div class="postit">
+                  <div class="postit-content">
+                    <h3>팔공산</h3>
+
+                    <img src="assets/images/Frame 9.png" alt="팔공산" />
+
+                    <p>주소</p>
+                    <p>
+                      대구광역시 동구, 군위군 및 경북<br />
+                      경산시, 영천시, 칠곡군 일대
+                    </p>
+
+                    <p>
+                      대구 근처에서 가장큰 산<br />
+                      케이블카를 타거나 갓바위에서 <br />
+                      소원을 빌수가 있다
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 스티커1 -->
+                <div class="sticer">
+                  <img src="assets/images/sticar9.png" alt="스티커9" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 2구역 -->
+      <section class="theme">
+        <div class="container">
+          <div class="theme-header">
+            <h2>테마별 골목길</h2>
+            <p>대구의 이색적인 골목길을 즐겨보세요!</p>
+          </div>
+
+          <div class="theme-slider">
+            <button
+              class="slide-btn prev"
+              type="button"
+              aria-label="이전 슬라이드"
+            >
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <div class="theme-list">
+              <div
+                class="theme-card"
+                data-title="찜갈비 골목"
+                data-desc="대구의 전통 찜갈비 맛집들이 모여있는 골목"
+              >
+                <img src="assets/images/image 2-1.png" alt="찜갈비 골목" />
+              </div>
+
+              <div
+                class="theme-card"
+                data-title="근대 문화 골목"
+                data-desc="대구의 근대시절의 역사가 담긴 골목"
+              >
+                <img src="assets/images/image 2-2.png" alt="근대 문화 골목" />
+              </div>
+
+              <div
+                class="theme-card"
+                data-title="무침회 골목"
+                data-desc="쫄깃한 오징어와 여러 야채가 어우러지는 무침회 골목"
+              >
+                <img src="assets/images/image 2-3.png" alt="무침회 골목" />
+              </div>
+
+              <div
+                class="theme-card"
+                data-title="곱창 골목"
+                data-desc="대구의 명물 중 하나인 곱창구이 맛집이 줄지어 있는 골목"
+              >
+                <img src="assets/images/image 2-4.png" alt="곱창 골목" />
+              </div>
+
+              <div
+                class="theme-card"
+                data-title="똥집 골목"
+                data-desc="질기지 않고 바삭한 똥집튀김을 맛볼 수 있는 골목"
+              >
+                <img src="assets/images/image 2-5.png" alt="똥집 골목" />
+              </div>
+            </div>
+
+            <button
+              class="slide-btn next"
+              type="button"
+              aria-label="다음 슬라이드"
+            >
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+
+          <div class="theme-info">
+            <h3 id="theme-title">찜갈비 골목</h3>
+            <p id="theme-desc">대구의 전통 찜갈비 맛집들이 모여있는 골목</p>
+          </div>
+
+          <div class="theme-character">
+            <img src="assets/images/sticar10.png" alt="캐릭터" />
+          </div>
+        </div>
+      </section>
+      <!-- 3구역 -->
+      <!-- 4구역 -->
+
+      <div>
+        <div id="infoPaper">동성로에 대한 설명이 여기에 표시됩니다.</div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer"></footer>
+  </body>
+</html>

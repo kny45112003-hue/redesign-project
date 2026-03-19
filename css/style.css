@@ -658,14 +658,14 @@ img {
 
 .food-spot {
   position: relative;
-  padding: 140px 0 120px;
-  background: #dff5f7;
+  padding: 140px 0 120px; /* 배경은 단색 또는 물결 없는 배경 이미지 */
   overflow: hidden;
 }
 
 .food-spot .container {
   width: 1200px;
   margin: 0 auto;
+  position: relative;
 }
 
 .food-stage {
@@ -686,53 +686,30 @@ img {
   font-family: "Sunflower", sans-serif;
 }
 
-/* 배경 물결 */
+/* 물결 */
 .food-wave {
   position: absolute;
-  left: -120px;
-  top: 250px;
-  width: 1500px;
-  height: 270px;
-  background: #8fb1e8;
-  border-radius: 52% 48% 45% 55% / 55% 45% 55% 45%;
-  transform: rotate(-9deg);
-  z-index: 1;
+  left: -361px;
+  top: -111px;
+  width: 1920px;
+  height: 965px;
+  background: url(../assets/images/background2.png) no-repeat center;
+  background-size: contain;
+  z-index: 2;
+  pointer-events: none;
 }
-
 /* 수저 */
 .food-utensil {
   position: absolute;
-  left: 350px;
-  top: 245px;
-  width: 170px;
+  left: 280px;
+  top: 126px;
+  width: 400px;
   z-index: 4;
   opacity: 0.95;
+  transform: rotate(105deg);
 }
 
-/* 중앙 큰 음식 */
-.food-main {
-  position: absolute;
-  left: 530px;
-  top: 248px;
-  width: 300px;
-  z-index: 4;
-}
-
-.food-main img {
-  width: 100%;
-  display: block;
-  filter: drop-shadow(0 14px 16px rgba(0, 0, 0, 0.16));
-  transition:
-    opacity 0.28s ease,
-    transform 0.28s ease;
-}
-
-.food-main.changing img {
-  opacity: 0;
-  transform: scale(0.92);
-}
-
-/* 주변 음식 공통 */
+/* 음식 버튼 공통 */
 .food-thumb {
   position: absolute;
   border: none;
@@ -741,133 +718,418 @@ img {
   cursor: pointer;
   z-index: 4;
   transition:
-    transform 0.25s ease,
+    left 0.45s ease,
+    top 0.45s ease,
+    transform 0.3s ease,
     opacity 0.25s ease;
 }
 
 .food-thumb img {
   display: block;
   filter: drop-shadow(0 10px 12px rgba(0, 0, 0, 0.14));
+  transition:
+    width 0.45s ease,
+    transform 0.3s ease;
 }
 
 .food-thumb:hover {
-  transform: scale(1.08);
+  transform: scale(1.06);
 }
 
 .food-thumb.active {
-  transform: scale(1.12);
+  z-index: 6;
 }
 
-/* 위치와 크기 */
-.thumb-left {
-  left: 886px;
-  top: 299px;
+.food-thumb.active img {
+  transform: scale(1.03);
 }
-.thumb-left img {
+
+/* 자리 시스템 */
+
+/* 메인 자리 */
+.pos-main {
+  left: 826px;
+  top: 252px;
+}
+
+.pos-main img {
+  width: 300px;
+}
+
+/* 오른쪽 아래 큰 자리 */
+.pos-1 {
+  left: 1050px;
+  top: 520px;
+}
+
+.pos-1 img {
   width: 180px;
 }
 
-.thumb-top {
-  left: 1140px;
-  top: 620px;
-}
-.thumb-top img {
-  width: 68px;
+/* 위쪽 작은 자리 */
+.pos-2 {
+  left: 1050px;
+  top: 130px;
 }
 
-.thumb-right {
-  left: 959px;
-  top: 470px;
-}
-.thumb-right img {
-  width: 150px;
+.pos-2 img {
+  width: 180px;
 }
 
-.thumb-bottom {
-  left: 1003px;
-  top: 181px;
-}
-.thumb-bottom img {
-  width: 105px;
+/* 위 오른쪽 작은 자리 */
+.pos-3 {
+  left: 1270px;
+  top: 20px;
 }
 
-.thumb-bottom-right {
-  left: 1128px;
-  top: 70px;
-}
-.thumb-bottom-right img {
-  width: 88px;
+.pos-3 img {
+  width: 100px;
 }
 
-/* 장식 */
+/* 아래 작은 자리 */
+.pos-4 {
+  left: 1270px;
+  top: 680px;
+}
+
+.pos-4 img {
+  width: 100px;
+}
+
+/* 물결 아래로 보낼 장식 */
 .food-deco {
   position: absolute;
-  z-index: 3;
+  z-index: 1;
   filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.12));
 }
 
 .deco-sauce {
-  left: 940px;
-  top: 520px;
-  width: 42px;
+  left: 1233px;
+  top: 187px;
+  width: 350px;
+  transform: rotate(270deg);
 }
 
 /* 캐릭터 */
 .food-character {
   position: absolute;
-  left: 110px;
-  top: 430px;
+  left: -11px;
+  top: 464px;
   z-index: 4;
+  transform: scaleX(-1);
 }
 
 .food-character img {
-  width: 230px;
+  width: 450px;
 }
 
 /* 말풍선 */
 .food-bubble {
   position: absolute;
-  left: 330px;
-  top: 520px;
-  width: 260px;
-  min-height: 140px;
-  padding: 28px 26px;
-  background: #fff;
-  border-radius: 52% 48% 50% 50% / 48% 52% 48% 52%;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  left: 418px;
+  top: 633px;
+  width: 460px;
+  min-height: 220px;
+  background: url(../assets/icons/tokicon.png) no-repeat center;
+  background-size: contain;
+  padding: 50px 60px 40px 135px;
   z-index: 4;
+  box-shadow: none;
   transition:
     opacity 0.25s ease,
     transform 0.25s ease;
 }
-
-.food-bubble::after {
-  content: "";
-  position: absolute;
-  left: -18px;
-  bottom: 34px;
-  width: 34px;
-  height: 34px;
-  background: #fff;
-  clip-path: polygon(100% 0, 0 50%, 100% 100%);
-}
-
 .food-bubble.changing {
   opacity: 0;
   transform: translateY(8px);
 }
 
 .food-bubble h3 {
-  margin-bottom: 10px;
+  margin: 0 0 8px;
   font-family: "Hi Melody", cursive;
-  font-size: 34px;
+  font-size: 30px;
   line-height: 1.1;
   color: #222;
 }
 
 .food-bubble p {
+  margin: 0;
   font-family: "Hi Melody", cursive;
-  font-size: 24px;
-  line-height: 1.45;
+  font-size: 21px;
+  line-height: 1.4;
   color: #333;
+}
+/* 4구역 */
+/* ===============================
+   SHOPPING SECTION
+================================ */
+
+.shopping-spot {
+  position: relative;
+  padding: 140px 0 120px;
+  overflow: hidden;
+}
+
+.shopping-spot .container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.shopping-stage {
+  position: relative;
+  width: 100%;
+  height: 900px;
+}
+
+.shopping-bg1 {
+  position: absolute;
+  left: 823px;
+  bottom: -50px;
+  width: 60%;
+  z-index: 1;
+}
+
+.shopping-bg2 {
+  position: absolute;
+  left: -360px;
+  bottom: -121px;
+  width: 80%;
+  z-index: 1;
+}
+
+.shopping-title {
+  position: absolute;
+  left: 80px;
+  top: 80px;
+  z-index: 4;
+  font-size: 38px;
+  color: #4e6b88;
+  font-family: "Sunflower", sans-serif;
+}
+
+/* 카드 */
+.shopping-card-wrap {
+  position: absolute;
+  left: 120px;
+  top: 150px;
+  z-index: 5;
+}
+
+.shopping-magpie {
+  position: absolute;
+  left: 100px;
+  top: -28px;
+  width: 70px;
+  z-index: 6;
+  transform: scaleX(-1);
+}
+
+.shopping-card {
+  width: 210px;
+  background: #f7efc9;
+  border-radius: 18px;
+  padding: 14px;
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.12);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.shopping-card.changing {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.shopping-card-img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.shopping-card-text h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.shopping-card-text p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* ===============================
+   표지판 공통
+================================ */
+
+.shop-sign {
+  position: absolute;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  z-index: 4;
+  transform-origin: center center;
+  transition: transform 0.25s ease;
+}
+
+/* 막대 */
+.sign-stick {
+  position: absolute;
+  left: 50%;
+  top: 62%;
+  transform: translateX(-50%);
+  width: 5%;
+  height: 80px;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+/* 표지판 판 */
+.sign-board {
+  position: relative;
+  display: block;
+  width: 256px;
+  z-index: 1;
+}
+
+/* hover / active */
+.shop-sign:hover {
+  transform: scale(1.04);
+}
+
+.shop-sign.active {
+  transform: scale(1.06);
+}
+
+/* 로고 이미지 */
+.sign-logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* 이시아 폴리스 텍스트 직접 입력 */
+.sign-text-main,
+.sign-text-sub {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Sunflower", sans-serif;
+  color: #fff;
+  z-index: 2;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.sign-text-main {
+  top: 18px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.sign-text-sub {
+  top: 52px;
+  font-size: 11px;
+}
+
+/* ===============================
+   표지판 위치
+================================ */
+
+.sign-dong {
+  left: 430px;
+  top: 218px;
+}
+
+.sign-dong .sign-logo {
+  width: 100px;
+}
+
+.sign-dong .sign-stick {
+  top: 70%;
+  height: 72px;
+}
+
+.sign-isia {
+  left: 430px;
+  top: 372px;
+}
+
+.sign-isia .sign-stick {
+  top: 68%;
+  height: 86px;
+}
+
+.sign-station {
+  left: 430px;
+  top: 460px;
+}
+
+.sign-station .station-logo {
+  width: 90px;
+}
+
+.sign-station .sign-stick {
+  top: 66%;
+  height: 78px;
+}
+
+.sign-seomun {
+  left: 430px;
+  top: 570px;
+}
+
+.sign-seomun .seomun-logo {
+  width: 120px;
+}
+
+.sign-seomun .sign-stick {
+  top: 60%;
+  height: 62px;
+}
+
+.sign-costco {
+  left: 430px;
+  top: 650px;
+}
+
+.sign-costco .costco-logo {
+  width: 110px;
+}
+
+.sign-costco .sign-stick {
+  top: 56%;
+  height: 58px;
+}
+
+/* 캐릭터 */
+.shopping-character {
+  position: absolute;
+  left: 400px;
+  bottom: -170px;
+  width: 450px;
+  z-index: 4;
+}
+
+/* 작은 새 */
+.shopping-bird {
+  position: absolute;
+  z-index: 4;
+}
+
+.bird1 {
+  right: 220px;
+  bottom: -38px;
+  width: 50px;
+  transform: scaleX(-1);
+}
+
+.bird2 {
+  right: 115px;
+  bottom: -21px;
+  width: 35px;
 }

@@ -67,29 +67,68 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  const thumbs = document.querySelectorAll(".food-thumb");
-  const mainWrap = document.getElementById("foodMain");
-  const mainImage = document.getElementById("foodMainImage");
+  const items = document.querySelectorAll(".food-thumb");
   const bubble = document.getElementById("foodBubble");
   const foodName = document.getElementById("foodName");
   const foodDesc = document.getElementById("foodDesc");
 
-  thumbs.forEach((thumb) => {
-    thumb.addEventListener("click", function () {
-      thumbs.forEach((item) => item.classList.remove("active"));
-      thumb.classList.add("active");
+  const positions = ["pos-main", "pos-1", "pos-2", "pos-3", "pos-4"];
 
-      mainWrap.classList.add("changing");
+  items.forEach((item) => {
+    item.addEventListener("click", function () {
+      if (item.classList.contains("pos-main")) return;
+
+      const mainItem = document.querySelector(".food-thumb.pos-main");
+      let clickedPos = "";
+
+      positions.forEach((pos) => {
+        if (item.classList.contains(pos)) {
+          clickedPos = pos;
+        }
+      });
+
+      if (!clickedPos) return;
+
+      item.classList.remove(clickedPos);
+      item.classList.add("pos-main");
+
+      mainItem.classList.remove("pos-main");
+      mainItem.classList.add(clickedPos);
+
+      items.forEach((el) => el.classList.remove("active"));
+      item.classList.add("active");
+
       bubble.classList.add("changing");
 
       setTimeout(() => {
-        mainImage.src = thumb.dataset.image;
-        mainImage.alt = thumb.dataset.name;
-        foodName.textContent = thumb.dataset.name;
-        foodDesc.textContent = thumb.dataset.desc;
-
-        mainWrap.classList.remove("changing");
+        foodName.textContent = item.dataset.name;
+        foodDesc.textContent = item.dataset.desc;
         bubble.classList.remove("changing");
+      }, 180);
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const signs = document.querySelectorAll(".shop-sign");
+  const card = document.getElementById("shoppingCard");
+  const cardImg = document.getElementById("shoppingCardImg");
+  const cardTitle = document.getElementById("shoppingCardTitle");
+  const cardDesc = document.getElementById("shoppingCardDesc");
+
+  signs.forEach((sign) => {
+    sign.addEventListener("click", function () {
+      signs.forEach((item) => item.classList.remove("active"));
+      sign.classList.add("active");
+
+      card.classList.add("changing");
+
+      setTimeout(() => {
+        cardImg.src = sign.dataset.image;
+        cardImg.alt = sign.dataset.title;
+        cardTitle.textContent = sign.dataset.title;
+        cardDesc.textContent = sign.dataset.desc;
+        card.classList.remove("changing");
       }, 180);
     });
   });

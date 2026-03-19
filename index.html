@@ -502,26 +502,26 @@
           <div class="food-stage">
             <h2 class="food-title">대구엔 뭐가 맛있을까?</h2>
 
+            <!-- 물결 아래에 깔릴 큰 고기 이미지 -->
+            <img
+              src="assets/images/backfood.png"
+              alt=""
+              class="food-deco deco-sauce"
+            />
+
+            <!-- 물결 -->
             <div class="food-wave"></div>
 
+            <!-- 수저 -->
             <img
               src="assets/images/Untitled-2.png"
               alt="수저"
               class="food-utensil"
             />
 
-            <!-- 중앙 큰 음식 -->
-            <div class="food-main" id="foodMain">
-              <img
-                id="foodMainImage"
-                src="assets/images/food1.png"
-                alt="납작만두"
-              />
-            </div>
-
             <!-- 클릭용 음식 썸네일 -->
             <button
-              class="food-thumb thumb-left active"
+              class="food-thumb pos-main active"
               data-name="납작만두"
               data-desc="바삭하고 얇은 만두피가 매력인 대구식 분식이에요"
               data-image="assets/images/food1.png"
@@ -531,51 +531,44 @@
             </button>
 
             <button
-              class="food-thumb thumb-top"
-              data-name="무침회"
-              data-desc="새콤달콤한 양념과 오징어, 채소가 어우러지는 대구식 별미예요"
+              class="food-thumb pos-1"
+              data-name="중화비빔밥"
+              data-desc="각종 재료를 불향 가득 소스에 매콤하게 볶아 밥 위에 먹는 음식이에요"
               data-image="assets/images/food2.png"
               type="button"
             >
-              <img src="assets/images/food2.png" alt="무침회" />
+              <img src="assets/images/food2.png" alt="중화비빔밥" />
             </button>
 
             <button
-              class="food-thumb thumb-right"
-              data-name="막창"
-              data-desc="고소하고 쫄깃한 식감이 매력적인 대구 대표 구이 메뉴예요"
+              class="food-thumb pos-2"
+              data-name="똥집"
+              data-desc="닭똥집을 튀김옷에 입혀 치킨처럼 즐기는 음식이에요"
               data-image="assets/images/food3.png"
               type="button"
             >
-              <img src="assets/images/food3.png" alt="막창" />
+              <img src="assets/images/food3.png" alt="똥집" />
             </button>
 
             <button
-              class="food-thumb thumb-bottom"
-              data-name="뭉티기"
-              data-desc="갓 잡은 고기를 참기름장에 찍어 먹는 대구의 대표 음식이에요"
+              class="food-thumb pos-3"
+              data-name="찜갈비"
+              data-desc="매콤한 소스에 마늘을 가득 넣은 대구 대표 음식이에요"
               data-image="assets/images/food4.png"
               type="button"
             >
-              <img src="assets/images/food4.png" alt="뭉티기" />
+              <img src="assets/images/food4.png" alt="찜갈비" />
             </button>
 
             <button
-              class="food-thumb thumb-bottom-right"
-              data-name="찜갈비"
-              data-desc="매콤하고 진한 양념이 배어 있는 대구 대표 음식이에요"
+              class="food-thumb pos-4"
+              data-name="뭉티기"
+              data-desc="갓 잡은 고기를 생으로 바로 먹는 쫀쫀한 특별한 음식이에요"
               data-image="assets/images/f00d5.png"
               type="button"
             >
-              <img src="assets/images/f00d5.png" alt="찜갈비" />
+              <img src="assets/images/f00d5.png" alt="뭉티기" />
             </button>
-
-            <!-- 장식용 작은 음식 -->
-            <img
-              src="assets/images/backfood.png"
-              alt=""
-              class="food-deco deco-sauce"
-            />
 
             <!-- 캐릭터 -->
             <div class="food-character">
@@ -584,15 +577,162 @@
 
             <!-- 말풍선 -->
             <div class="food-bubble" id="foodBubble">
-              <h3 id="foodName">납작만두</h3>
-              <p id="foodDesc">
+              <h3 id="foodName" style="margin-left: 50px">납작만두</h3>
+              <p id="foodDesc" style="margin-left: 60px">
                 바삭하고 얇은 만두피가 매력인 대구식 분식이에요
               </p>
             </div>
           </div>
         </div>
       </section>
+
       <!-- 4구역 -->
+      <section class="shopping-spot">
+        <div class="container">
+          <div class="shopping-stage">
+            <!-- 배경 -->
+            <img
+              src="assets/images/background3.png"
+              alt=""
+              class="shopping-bg1"
+            />
+            <img
+              src="assets/images/background4.png"
+              alt=""
+              class="shopping-bg2"
+            />
+
+            <!-- 제목 -->
+            <h2 class="shopping-title">대구 쇼핑 핫플레이스</h2>
+
+            <!-- 까치 + 카드 -->
+            <div class="shopping-card-wrap">
+              <img
+                src="assets/images/sticar12.png"
+                alt="까치"
+                class="shopping-magpie"
+              />
+
+              <div class="shopping-card" id="shoppingCard">
+                <img
+                  src="assets/images/img0.png"
+                  alt="동성로"
+                  class="shopping-card-img"
+                  id="shoppingCardImg"
+                />
+                <div class="shopping-card-text">
+                  <h3 id="shoppingCardTitle">동성로</h3>
+                  <p id="shoppingCardDesc">
+                    대구의 대표 번화가로 다양한 브랜드와 맛집을 즐길 수 있는
+                    거리예요.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 표지판 1: 동성로 -->
+            <button
+              class="shop-sign sign-dong active"
+              data-title="동성로"
+              data-desc="대구의 대표 번화가로 다양한 브랜드와 맛집을 즐길 수 있는 거리예요."
+              data-image="assets/images/img0.png"
+              type="button"
+            >
+              <img src="assets/icons/stick.png" alt="" class="sign-stick" />
+              <img src="assets/icons/pogipan1.png" alt="" class="sign-board" />
+              <img
+                src="assets/icons/dong-loge.png"
+                alt="동성로"
+                class="sign-logo"
+              />
+            </button>
+
+            <!-- 표지판 2: 이시아 폴리스 (텍스트 직접 입력) -->
+            <button
+              class="shop-sign sign-isia"
+              data-title="이시아 폴리스"
+              data-desc="복합 쇼핑몰과 아울렛을 함께 즐길 수 있는 대형 쇼핑 공간이에요."
+              data-image="assets/images/img2.jpg"
+              type="button"
+            >
+              <img src="assets/icons/stick.png" alt="" class="sign-stick" />
+              <img src="assets/icons/pogipan2.png" alt="" class="sign-board" />
+              <span class="sign-text-main">이시아 폴리스</span>
+              <span class="sign-text-sub">복합쇼핑몰</span>
+            </button>
+
+            <!-- 표지판 3: 동대구역 -->
+            <button
+              class="shop-sign sign-station"
+              data-title="동대구역"
+              data-desc="쇼핑과 교통을 함께 이용할 수 있는 대구의 중심 상권이에요."
+              data-image="assets/images/img3.png"
+              type="button"
+            >
+              <img src="assets/icons/stick.png" alt="" class="sign-stick" />
+              <img src="assets/icons/pogipan3.png" alt="" class="sign-board" />
+              <img
+                src="assets/icons/dongyak-loge.png"
+                alt="동대구역"
+                class="sign-logo station-logo"
+              />
+            </button>
+
+            <!-- 표지판 4: 서문시장 -->
+            <button
+              class="shop-sign sign-seomun"
+              data-title="서문시장"
+              data-desc="먹거리와 전통이 살아있는 대구의 대표 전통시장이에요."
+              data-image="assets/images/img3.jpg"
+              type="button"
+            >
+              <img src="assets/icons/stick.png" alt="" class="sign-stick" />
+              <img src="assets/icons/pogipan4.png" alt="" class="sign-board" />
+              <img
+                src="assets/icons/sumon-icon.png"
+                alt="서문시장"
+                class="sign-logo seomun-logo"
+              />
+            </button>
+
+            <!-- 표지판 5: 코스트코 -->
+            <button
+              class="shop-sign sign-costco"
+              data-title="코스트코"
+              data-desc="대용량 상품과 다양한 수입 제품을 만날 수 있는 인기 쇼핑 공간이에요."
+              data-image="assets/images/img.jpg"
+              type="button"
+            >
+              <img src="assets/icons/stick.png" alt="" class="sign-stick" />
+              <img src="assets/icons/pogipan5.png" alt="" class="sign-board" />
+              <img
+                src="assets/icons/cost-ione.png"
+                alt="코스트코"
+                class="sign-logo costco-logo"
+              />
+            </button>
+
+            <!-- 캐릭터 -->
+            <img
+              src="assets/images/sticar13.png"
+              alt="쇼핑 캐릭터"
+              class="shopping-character"
+            />
+
+            <!-- 작은 새 -->
+            <img
+              src="assets/images/sticar14.png"
+              alt=""
+              class="shopping-bird bird1"
+            />
+            <img
+              src="assets/images/sticar14.png"
+              alt=""
+              class="shopping-bird bird2"
+            />
+          </div>
+        </div>
+      </section>
 
       <div>
         <div id="infoPaper">동성로에 대한 설명이 여기에 표시됩니다.</div>

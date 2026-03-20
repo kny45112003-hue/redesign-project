@@ -145,19 +145,16 @@ img {
   font-size: 18px;
 }
 
-/* .section {
-  position: absolute;
-  width: 1920px;
-  height: 7977px;
-  left: 1px;
-  top: 0px;
+.section {
+  width: 100%;
   background: linear-gradient(
     180deg,
     rgba(246, 244, 188, 0.6) 0%,
     rgba(174, 243, 255, 0.6) 51.92%,
     rgba(141, 255, 171, 0.6) 100%
   );
-} */
+}
+
 /* ===============================
    MAP SECTION
 ================================ */
@@ -168,17 +165,19 @@ img {
 }
 
 .map-title {
-  text-align: center;
+  text-align: left;
   font-size: 40px;
   color: #4e6b88;
   font-family: "Sunflower";
   margin-bottom: 10px;
+  margin-left: 300px;
 }
 
 .map-sub {
   text-align: center;
   font-size: 18px;
   margin-bottom: 70px;
+  margin-left: -884px;
 }
 
 /* 지도 영역 */
@@ -457,24 +456,36 @@ img {
   position: relative;
   min-height: 900px;
   padding: 120px 0 80px;
-  background: url("../assets/images/lode.png") no-repeat center bottom;
-  background-size: cover;
   margin-top: 219px;
+  overflow: hidden;
 }
 
+/* 배경만 따로 */
 .theme::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.7); /* ← 70% 흰색 덮기 = 이미지 30% 느낌 */
+
+  background: url("../assets/images/lode.png") no-repeat center bottom;
+  background-size: cover;
+
+  opacity: 0.3; /* 🔥 여기 30% */
+
   z-index: 0;
+}
+
+/* 기존 흰색 덮는 레이어 유지 */
+.theme::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: none;
+  z-index: 1;
 }
 
 .theme .container {
   position: relative;
-  z-index: 1;
-  width: 1200px;
-  margin: 0 auto;
+  z-index: 2;
 }
 
 /* ===============================
@@ -482,7 +493,8 @@ img {
 ================================ */
 
 .theme-header {
-  text-align: center;
+  text-align: left;
+  margin-left: 300px;
   margin-bottom: 60px;
 }
 
@@ -618,11 +630,11 @@ img {
 }
 
 .slide-btn.prev {
-  left: 120px;
+  left: 420px;
 }
 
 .slide-btn.next {
-  right: 120px;
+  right: 420px;
 }
 
 .slide-btn i {
@@ -697,7 +709,20 @@ img {
   background-size: contain;
   z-index: 2;
   pointer-events: none;
+  animation: waveDrift 8s ease-in-out infinite;
 }
+@keyframes waveDrift {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(18px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 /* 수저 */
 .food-utensil {
   position: absolute;
@@ -722,6 +747,7 @@ img {
     top 0.45s ease,
     transform 0.3s ease,
     opacity 0.25s ease;
+  transform-origin: center center;
 }
 
 .food-thumb img {
@@ -750,6 +776,7 @@ img {
 .pos-main {
   left: 826px;
   top: 252px;
+  animation: floatMain 3.2s ease-in-out infinite;
 }
 
 .pos-main img {
@@ -760,6 +787,7 @@ img {
 .pos-1 {
   left: 1050px;
   top: 520px;
+  animation: floatSide1 2.8s ease-in-out infinite;
 }
 
 .pos-1 img {
@@ -770,6 +798,7 @@ img {
 .pos-2 {
   left: 1050px;
   top: 130px;
+  animation: floatSide2 3.5s ease-in-out infinite;
 }
 
 .pos-2 img {
@@ -780,6 +809,7 @@ img {
 .pos-3 {
   left: 1270px;
   top: 20px;
+  animation: floatSide3 2.6s ease-in-out infinite;
 }
 
 .pos-3 img {
@@ -790,10 +820,70 @@ img {
 .pos-4 {
   left: 1270px;
   top: 680px;
+  animation: floatSide4 3.1s ease-in-out infinite;
 }
 
 .pos-4 img {
   width: 100px;
+}
+@keyframes floatMain {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes floatSide1 {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(-2deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes floatSide2 {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(6px) rotate(2deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes floatSide3 {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(2deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes floatSide4 {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(7px) rotate(-1deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
 }
 
 /* 물결 아래로 보낼 장식 */
@@ -821,6 +911,26 @@ img {
 
 .food-character img {
   width: 450px;
+  animation: characterTalk 2s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+@keyframes characterTalk {
+  0% {
+    transform: scaleX(-1) rotate(0deg);
+  }
+  25% {
+    transform: scaleX(-1) rotate(-3deg);
+  }
+  50% {
+    transform: scaleX(-1) rotate(0deg);
+  }
+  75% {
+    transform: scaleX(-1) rotate(3deg);
+  }
+  100% {
+    transform: scaleX(-1) rotate(0deg);
+  }
 }
 
 /* 말풍선 */
@@ -910,18 +1020,19 @@ img {
 /* 카드 */
 .shopping-card-wrap {
   position: absolute;
-  left: 120px;
-  top: 150px;
+  left: 160px;
+  top: 210px;
   z-index: 5;
+  transform: rotate(3deg);
 }
 
 .shopping-magpie {
   position: absolute;
-  left: 100px;
-  top: -28px;
-  width: 70px;
+  left: 30px;
+  top: -101px;
+  width: 160px;
   z-index: 6;
-  transform: scaleX(-1);
+  transform: scaleX(-1) rotate(349deg);
 }
 
 .shopping-card {
@@ -1002,40 +1113,86 @@ img {
   transform: scale(1.06);
 }
 
-/* 로고 이미지 */
+/* 로고 공통 */
 .sign-logo {
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   z-index: 2;
   pointer-events: none;
 }
 
-/* 이시아 폴리스 텍스트 직접 입력 */
+/* 이시아 폴리스 텍스트 공통 */
 .sign-text-main,
 .sign-text-sub {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: "Sunflower", sans-serif;
-  color: #fff;
   z-index: 2;
   pointer-events: none;
   white-space: nowrap;
+  font-family: "Sunflower", sans-serif;
 }
 
-.sign-text-main {
-  top: 18px;
-  font-size: 22px;
+/* ===============================
+   표지판별 로고 / 글자 위치
+================================ */
+
+/* 동성로 */
+.sign-dong .sign-logo {
+  left: 45%;
+  top: 42%;
+  transform: translate(-50%, -50%);
+  width: 135px;
+}
+/* .sign-dong-text-sub {
+  position: relative;
+  left: 45%;
+  top: 38%;
+  transform: translate(-50%);
+  font-size: 25px;
+  font-weight: 400;
+  color: #ffcd7d;
+} */
+/* 이시아 폴리스 */
+.sign-isia .sign-text-main {
+  left: 6%;
+  top: 25px;
+  transform: translateX(-50%);
+  font-size: 27px;
   font-weight: 700;
+  color: #ffffff;
+  transform: rotate(357deg);
 }
 
-.sign-text-sub {
-  top: 52px;
-  font-size: 11px;
+.sign-isia .sign-text-sub {
+  left: 8%;
+  top: 60px;
+  transform: translateX(-50%);
+  font-size: 13px;
+  color: #f5f5f5;
+  transform: rotate(357deg);
 }
 
+/* 동대구역 */
+.sign-station .station-logo {
+  left: 48%;
+  top: 49%;
+  transform: translate(-50%, -50%);
+  width: 110px;
+}
+
+/* 서문시장 */
+.sign-seomun .seomun-logo {
+  left: 52%;
+  top: 48%;
+  transform: translate(-50%, -50%);
+  width: 160px;
+}
+
+/* 코스트코 */
+.sign-costco .costco-logo {
+  left: 45%;
+  top: 42%;
+  transform: translate(-50%, -50%) rotate(356deg);
+  width: 110px;
+}
 /* ===============================
    표지판 위치
 ================================ */
@@ -1084,7 +1241,7 @@ img {
 }
 
 .sign-seomun .seomun-logo {
-  width: 120px;
+  width: 160px;
 }
 
 .sign-seomun .sign-stick {
@@ -1109,9 +1266,9 @@ img {
 /* 캐릭터 */
 .shopping-character {
   position: absolute;
-  left: 400px;
-  bottom: -170px;
-  width: 450px;
+  left: 460px;
+  bottom: -122px;
+  width: 350px;
   z-index: 4;
 }
 
@@ -1132,4 +1289,137 @@ img {
   right: 115px;
   bottom: -21px;
   width: 35px;
+}
+/* 미디어 구역 */
+.media-section {
+  position: relative;
+  padding: 120px 0;
+  background: #8fb1e8;
+}
+.media-section .container {
+  width: 1200px;
+  margin: 0 auto;
+}
+.media-stage {
+  position: relative;
+  min-height: 500px;
+}
+
+.media-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: "PretendardVariable";
+  font-weight: 900;
+  color: #35629c;
+}
+.media-slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.media-list {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: center;
+}
+
+.media-video {
+  width: 250px;
+  height: 140px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  background: #000;
+}
+
+.media-video iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.media-btn {
+  border: none;
+  background: transparent;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  color: #4e6b88;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.media-btn.prev {
+  margin-right: 16px;
+}
+
+.media-btn.next {
+  margin-left: 16px;
+}
+
+.quick-menu {
+  width: 560px;
+  height: 92px;
+  margin: 0 auto;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.quick-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: #4e6b88;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.quick-item img {
+  width: 97px;
+  height: 51px;
+  object-fit: contain;
+  display: block;
+}
+/* 푸터 */
+.footer {
+  background: #132133;
+  padding: 60px 0;
+  color: #fff;
+}
+
+.footer .inner {
+  width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 로고 */
+.footer-logo img {
+  width: 220px;
+}
+
+/* 텍스트 */
+.footer-text {
+  text-align: right;
+  line-height: 1.8;
+  font-size: 15px;
+  color: #d6d6d6;
+  max-width: 600px;
+}
+
+.footer-text p {
+  margin-bottom: 6px;
 }

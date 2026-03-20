@@ -1,4 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const heroSwiper = new Swiper(".hero-swiper", {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    speed: 800,
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
   const pins = document.querySelectorAll(".map-pin");
 
   pins.forEach(function (pin) {
